@@ -1,0 +1,29 @@
+
+This guide will help you to set up and configure sonarqube on Linux servers (Redhat/Centos 7 versions) on any cloud platforms like ec2, azure, compute engine or on-premise data centers. 
+Follow the steps given below for the complete sonarqube configuration.
+
+Sonarqube requirements
+    Server with minimum 2GB/1 vcpu capacity
+    PostgreSQL version 9.3 or greater.
+    OpenJDK 11 or JRE 11
+    All sonarquber process should run as a non-root sonar user.
+
+Prep the Server With Required Softwares:
+=======================================
+
+Step 1: Update the server.
+    sudo yum update -y
+Step 2: Install wget & unzip.
+    sudo yum install wget unzip -y
+Step 3: Install java 11.
+    sudo yum install java-11-openjdk-devel -y
+Step 4: Login as root and execute the following commands.
+    sysctl vm.max_map_count
+    sysctl fs.file-max
+    ulimit -n
+    ulimit -u
+
+Setup PostgreSQL 10 Database For SonarQube:
+===========================================
+
+
